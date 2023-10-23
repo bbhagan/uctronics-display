@@ -1,0 +1,14 @@
+# /etc/systemd/system/uctronics-display.service
+
+[Unit]
+Description=Raspberry Pi Rackmount Display Service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/U6143_ssd1306/C/display
+ExecStop=/usr/local/bin/U6143_ssd1306/C/display
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
